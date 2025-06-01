@@ -16,7 +16,7 @@ export interface UserProps {
 }
 
 export interface AddressProps {
-    street:  string;
+    street: string;
     suite:   string;
     city:    string;
     zipcode: string;
@@ -32,4 +32,15 @@ export interface CompanyProps {
     name:        string;
     catchPhrase: string;
     bs:          string;
+}
+export interface PostData {
+    userId: number;
+    id?: number;
+    title: string;
+    body: string;
+}
+
+export interface PostModalProps {
+    onClose: () => void;
+    onSubmit: (data: PostData) => void;
 }
